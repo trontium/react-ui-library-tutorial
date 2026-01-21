@@ -6,14 +6,14 @@ let publicPath: string | undefined;
 
 // Github Pages 部署时需要更换为自己的仓库名
 if (process.env.NODE_ENV === 'production' && process.env.PREVIEW !== '1') {
-  base = '/react-ui-library-tutorial/';
-  publicPath = '/react-ui-library-tutorial/';
+  base = '/trontium-ui/';
+  publicPath = '/trontium-ui/';
 }
 
 export default defineConfig({
   base,
   publicPath,
-  title: 'Happy UI',
+  title: 'Trontium UI',
   outputPath: 'doc-site',
   resolve: {
     docDirs: ['docs'],
@@ -25,7 +25,7 @@ export default defineConfig({
     [
       'import',
       {
-        libraryName: '@zzzzw/happy-ui',
+        libraryName: '@trontium/ui',
         libraryDirectory: '',
         customStyleName: (name: string) => path.resolve(__dirname, `src/${name}/style/index.ts`),
       },

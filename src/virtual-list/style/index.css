@@ -1,0 +1,18 @@
+.trontium-virtual-list {
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  background-color: #fff;
+}
+.trontium-virtual-list::-webkit-scrollbar {
+  width: 6px;
+}
+.trontium-virtual-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+.trontium-virtual-list::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 3px;
+}
+.trontium-virtual-list::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

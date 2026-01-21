@@ -1,15 +1,15 @@
 {
-  "name": "@zzzzw/happy-ui",
-  "version": "1.2.0",
-  "description": "A React UI Library.",
+  "name": "@trontium/ui",
+  "version": "1.0.0",
+  "description": "A React UI Library by zsq.",
   "keywords": [],
-  "homepage": "https://github.com/worldzhao/react-ui-library-tutorial#readme",
+  "homepage": "https://github.com/trontium/trontium-ui#readme",
   "bugs": {
-    "url": "https://github.com/worldzhao/react-ui-library-tutorial/issues"
+    "url": "https://github.com/trontium/trontium-ui/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/worldzhao/react-ui-library-tutorial.git"
+    "url": "git+https://github.com/trontium/trontium-ui.git"
   },
   "license": "ISC",
   "main": "lib/index.js",
@@ -59,7 +59,8 @@
     }
   },
   "dependencies": {
-    "@babel/runtime": "^7"
+    "@babel/runtime": "^7",
+    "classnames": "^2.5.1"
   },
   "devDependencies": {
     "@babel/core": "^7.7.7",
@@ -73,10 +74,12 @@
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
     "@trivago/prettier-plugin-sort-imports": "^3.2.0",
+    "@types/classnames": "^2.3.4",
     "@types/jest": "^27.4.1",
     "@types/node": "^16.11.26",
     "@types/react": "^16.8.0",
     "@types/react-dom": "^16.8.0",
+    "@types/testing-library__jest-dom": "^5.14.5",
     "@umijs/fabric": "^3",
     "babel-plugin-import": "^1.13.3",
     "commitizen": "^4.2.5",
@@ -85,7 +88,7 @@
     "cross-env": "^7.0.3",
     "cz-conventional-changelog": "^3.3.0",
     "doctoc": "^1.4.0",
-    "dumi": "^2.2.4",
+    "dumi": "^2.4.21",
     "eslint": "^7",
     "gh-pages": "^3.2.3",
     "gulp": "^4.0.2",
@@ -122,7 +125,7 @@
     "registry": "https://registry.npmjs.org/"
   },
   "authors": {
-    "name": "worldzhao",
-    "email": "1007326924@qq.com"
+    "name": "zsq",
+    "email": ""
   }
 }

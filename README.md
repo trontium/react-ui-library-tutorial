@@ -1,18 +1,14 @@
-## React 组件库搭建指南
+## Trontium UI
 
-- [React 组件库搭建指南（一）：项目初始化](https://github.com/worldzhao/blog/issues/3)
-- [React 组件库搭建指南（二）：开发调试](https://github.com/worldzhao/blog/issues/4)
-- [React 组件库搭建指南（三）：编译打包](https://github.com/worldzhao/blog/issues/5)
-- [React 组件库搭建指南（四）：单元测试](https://github.com/worldzhao/blog/issues/6)
-- [React 组件库搭建指南（五）：标准化发布流程](https://github.com/worldzhao/blog/issues/7)
+A React UI Library by zsq.
 
-[🚀 在线预览](https://worldzhao.github.io/react-ui-library-tutorial)
+[🚀 在线预览](https://trontium.github.io/trontium-ui)
 
 🚆 本地预览
 
 ```bash
-git clone git@github.com:worldzhao/react-ui-library-tutorial.git
-cd react-ui-library-tutorial
+git clone git@github.com:trontium/trontium-ui.git
+cd trontium-ui
 pnpm install
 pnpm start
 ```
