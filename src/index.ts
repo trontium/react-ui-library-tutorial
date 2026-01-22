@@ -8,4 +8,6 @@ export { default as Tree } from './tree';
 
 export { default as Tabs } from './tabs';
 
+export { default as Input } from './input';
+
 /* PLOP_INJECT_EXPORT */
