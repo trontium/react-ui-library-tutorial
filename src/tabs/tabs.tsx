@@ -1,6 +1,9 @@
-import React, { FC, useState } from 'react';
+import type { FC } from 'react';
+import React, { useState } from 'react';
+
 import classNames from 'classnames';
-import { TabsProps, TabPaneProps } from './interface';
+
+import type { TabPaneProps, TabsProps } from './interface';
 import './style';
 
 const prefixCls = 'trontium-tabs';
@@ -36,9 +39,9 @@ const Tabs: FC<TabsProps> & { TabPane: FC<TabPaneProps> } = ({
   };
 
   const getChildKey = (child: React.ReactElement<any>, index: number) => {
-      // @ts-ignore
-      return child.key || index;
-  }
+    // @ts-ignore
+    return child.key || index;
+  };
 
   const renderNav = () => {
     return (
@@ -51,8 +54,8 @@ const Tabs: FC<TabsProps> & { TabPane: FC<TabPaneProps> } = ({
 
           // Initialize active key if not set
           if (mergedActiveKey === undefined && index === 0) {
-              // This is a side effect during render, slightly risky but acceptable for simple init
-              // Better pattern is useEffect but local state init handles defaultActiveKey
+            // This is a side effect during render, slightly risky but acceptable for simple init
+            // Better pattern is useEffect but local state init handles defaultActiveKey
           }
 
           return (
@@ -81,9 +84,12 @@ const Tabs: FC<TabsProps> & { TabPane: FC<TabPaneProps> } = ({
         {React.Children.map(children, (child, index) => {
           if (!React.isValidElement(child)) return null;
           const key = getChildKey(child, index);
-          // If no active key set, default to first one? 
+          // If no active key set, default to first one?
           // Logic: mergedActiveKey ? key === mergedActiveKey : index === 0
-          const isActive = mergedActiveKey !== undefined ? key === mergedActiveKey : (defaultActiveKey === undefined && index === 0);
+          const isActive =
+            mergedActiveKey !== undefined
+              ? key === mergedActiveKey
+              : defaultActiveKey === undefined && index === 0;
 
           if (!isActive) return null;
 

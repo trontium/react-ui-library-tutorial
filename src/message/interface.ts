@@ -1,4 +1,4 @@
-import React from 'react';
+import type React from 'react';
 
 export type NoticeType = 'info' | 'success' | 'error' | 'warning' | 'loading';
 
@@ -24,6 +24,6 @@ export interface MessageArgsProps {
 }
 
 export interface MessageItemProps extends MessageArgsProps {
-    noticeId: React.Key;
-    onRemove: (key: React.Key) => void;
+  noticeId: React.Key;
+  onRemove: (key: React.Key) => void;
 }

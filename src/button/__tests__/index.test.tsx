@@ -1,6 +1,8 @@
 import React from 'react';
+
 import '@testing-library/jest-dom';
-import { render, fireEvent } from '@testing-library/react';
+import { fireEvent, render } from '@testing-library/react';
+
 import Button from '../button';
 
 describe('Button Component', () => {
@@ -18,7 +20,11 @@ describe('Button Component', () => {
 
   it('renders disabled button', () => {
     const handleClick = jest.fn();
-    const { getByText } = render(<Button disabled onClick={handleClick}>Disabled</Button>);
+    const { getByText } = render(
+      <Button disabled onClick={handleClick}>
+        Disabled
+      </Button>,
+    );
     const button = getByText('Disabled').closest('button');
     expect(button).toBeDisabled();
     fireEvent.click(getByText('Disabled'));
@@ -26,10 +32,10 @@ describe('Button Component', () => {
   });
 
   it('renders loading button', () => {
-      const { container } = render(<Button loading>Loading</Button>);
-      expect(container.querySelector('.trontium-btn-loading')).toBeTruthy();
+    const { container } = render(<Button loading>Loading</Button>);
+    expect(container.querySelector('.trontium-btn-loading')).toBeTruthy();
   });
-  
+
   it('renders primary button', () => {
     const { container } = render(<Button type="primary">Primary</Button>);
     expect(container.querySelector('.trontium-btn-primary')).toBeTruthy();

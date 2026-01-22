@@ -1,7 +1,11 @@
 import React from 'react';
+
+// Assuming Input exists and exports default
+import Button from '../../button';
+import Input from '../../input';
 import Form from '../index';
-import Input from '../../input'; // Assuming Input exists and exports default
-import Button from '../../button'; // Assuming Button exists
+
+// Assuming Button exists
 
 export default () => {
   return (

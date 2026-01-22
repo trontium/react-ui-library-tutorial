@@ -25,10 +25,10 @@ group: 数据展示
 
 #### TreeDataNode
 
-| 属性 | 说明 | 类型 | 默认值 |
-| --- | --- | --- | --- |
-| key | key | `string \| number` | - |
-| title | 标题 | `ReactNode` | - |
-| children | 子节点 | `TreeDataNode[]` | - |
-| disabled | 禁用 | `boolean` | `false` |
-| selectable | 是否可选 | `boolean` | `true` |
+| 属性       | 说明     | 类型               | 默认值  |
+| ---------- | -------- | ------------------ | ------- |
+| key        | key      | `string \| number` | -       |
+| title      | 标题     | `ReactNode`        | -       |
+| children   | 子节点   | `TreeDataNode[]`   | -       |
+| disabled   | 禁用     | `boolean`          | `false` |
+| selectable | 是否可选 | `boolean`          | `true`  |

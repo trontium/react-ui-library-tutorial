@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { Button } from '@trontium/ui';
 
 export default () => (

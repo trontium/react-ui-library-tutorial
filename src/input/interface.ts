@@ -1,4 +1,4 @@
-import { InputHTMLAttributes, ReactNode, CSSProperties, KeyboardEvent } from 'react';
+import type { CSSProperties, InputHTMLAttributes, KeyboardEvent, ReactNode } from 'react';
 
 export type InputSize = 'large' | 'middle' | 'small';
 

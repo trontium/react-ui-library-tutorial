@@ -17,16 +17,16 @@ group: 数据录入
 
 ### Form
 
-| 参数 | 说明 | 类型 | 默认值 |
-| --- | --- | --- | --- |
-| children | 表单内容 | ReactNode | - |
-| className | 类名 | string | - |
-| style | 样式 | CSSProperties | - |
+| 参数      | 说明     | 类型          | 默认值 |
+| --------- | -------- | ------------- | ------ |
+| children  | 表单内容 | ReactNode     | -      |
+| className | 类名     | string        | -      |
+| style     | 样式     | CSSProperties | -      |
 
 ### Form.Item
 
-| 参数 | 说明 | 类型 | 默认值 |
-| --- | --- | --- | --- |
-| label | 标签名 | ReactNode | - |
-| name | 字段名 | string | - |
-| children | 控件 | ReactNode | - |
+| 参数     | 说明   | 类型      | 默认值 |
+| -------- | ------ | --------- | ------ |
+| label    | 标签名 | ReactNode | -      |
+| name     | 字段名 | string    | -      |
+| children | 控件   | ReactNode | -      |

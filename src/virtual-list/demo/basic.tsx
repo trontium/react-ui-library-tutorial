@@ -1,5 +1,6 @@
 // src/virtual-list/demo/basic.tsx
 import React from 'react';
+
 import VirtualList from '../index';
 import '../style';
 
@@ -15,13 +16,8 @@ export default () => {
     <div style={{ padding: 20 }}>
       <h3>10,000 Items Virtual List</h3>
       <p>Scroll down to see the virtual rendering in action. Only visible items are rendered.</p>
-      
-      <VirtualList
-        height={300}
-        itemHeight={50}
-        data={data}
-        itemKey={(item) => item.id}
-      >
+
+      <VirtualList height={300} itemHeight={50} data={data} itemKey={(item) => item.id}>
         {(item, index) => (
           <div
             style={{

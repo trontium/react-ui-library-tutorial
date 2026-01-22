@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { Tabs } from '@trontium/ui';
 
 const { TabPane } = Tabs;

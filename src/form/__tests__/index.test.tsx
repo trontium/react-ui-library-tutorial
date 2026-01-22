@@ -1,6 +1,8 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+
 import '@testing-library/jest-dom/extend-expect';
+import { render } from '@testing-library/react';
+
 import Form from '../index';
 
 describe('Form', () => {
@@ -10,7 +12,7 @@ describe('Form', () => {
         <Form.Item label="Test">
           <input />
         </Form.Item>
-      </Form>
+      </Form>,
     );
     expect(container).toBeInTheDocument();
   });
@@ -21,7 +23,7 @@ describe('Form', () => {
         <Form.Item label="Username">
           <input />
         </Form.Item>
-      </Form>
+      </Form>,
     );
     expect(getByText('Username')).toBeInTheDocument();
   });

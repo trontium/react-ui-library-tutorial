@@ -1,8 +1,11 @@
-import React, { FC } from 'react';
+import type { FC } from 'react';
+import React from 'react';
+
 import classNames from 'classnames';
-import { FormProps } from './interface';
+
 import { FormContext } from './context';
 import FormItem from './FormItem';
+import type { FormProps } from './interface';
 
 const Form: FC<FormProps> & { Item: typeof FormItem } = ({
   className,

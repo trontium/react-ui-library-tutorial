@@ -1,6 +1,8 @@
 import React from 'react';
+
 import classNames from 'classnames';
-import { ButtonProps, NativeButtonProps, AnchorButtonProps } from './interface';
+
+import type { AnchorButtonProps, ButtonProps, NativeButtonProps } from './interface';
 
 const prefixCls = 'trontium-btn';
 
@@ -38,17 +40,17 @@ const Button: React.FC<ButtonProps & (NativeButtonProps | AnchorButtonProps)> = 
   const iconNode = loading ? <span className={`${prefixCls}-loading-icon`}>⟳</span> : null;
 
   if (type === 'link') {
-      return (
-          <a
-             className={classes}
-             style={style}
-             onClick={handleClick}
-             {...(restProps as AnchorButtonProps)}
-          >
-              {iconNode}
-              {children}
-          </a>
-      )
+    return (
+      <a
+        className={classes}
+        style={style}
+        onClick={handleClick}
+        {...(restProps as AnchorButtonProps)}
+      >
+        {iconNode}
+        {children}
+      </a>
+    );
   }
 
   return (

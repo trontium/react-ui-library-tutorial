@@ -1,7 +1,10 @@
 // src/virtual-list/virtual-list.tsx
-import React, { useState, useRef, useMemo, UIEvent, useEffect } from 'react';
+import type { UIEvent } from 'react';
+import React, { useMemo, useRef, useState } from 'react';
+
 import classNames from 'classnames';
-import { VirtualListProps } from './interface';
+
+import type { VirtualListProps } from './interface';
 
 export const VirtualList = <T extends any>(props: VirtualListProps<T>) => {
   const { height, itemHeight, data, itemKey, children, style, className, ...restProps } = props;
@@ -15,11 +18,11 @@ export const VirtualList = <T extends any>(props: VirtualListProps<T>) => {
   };
 
   const { startIndex, endIndex, offsetTop } = useMemo(() => {
-    const startIndex = Math.floor(scrollTop / itemHeight);
+    const start = Math.floor(scrollTop / itemHeight);
     const visibleCount = Math.ceil(height / itemHeight);
-    const endIndex = Math.min(data.length, startIndex + visibleCount + 5); // Buffer to prevent flickering
-    const offsetTop = startIndex * itemHeight;
-    return { startIndex, endIndex, offsetTop };
+    const end = Math.min(data.length, start + visibleCount + 5); // Buffer to prevent flickering
+    const top = start * itemHeight;
+    return { startIndex: start, endIndex: end, offsetTop: top };
   }, [scrollTop, itemHeight, height, data.length]);
 
   const visibleData = data.slice(startIndex, endIndex);
@@ -48,7 +51,7 @@ export const VirtualList = <T extends any>(props: VirtualListProps<T>) => {
             // The key is critical for React to reuse nodes correctly
             return (
               <div key={itemKey(item)} style={{ height: itemHeight }}>
-                 {children(item, actualIndex)}
+                {children(item, actualIndex)}
               </div>
             );
           })}

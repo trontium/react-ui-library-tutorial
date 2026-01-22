@@ -1,6 +1,8 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+
 import Alert from '..';
+
+import { render } from '@testing-library/react';
 
 describe('<Alert />', () => {
   test('should render default', () => {
@@ -13,7 +15,7 @@ describe('<Alert />', () => {
 
     const { getByText } = render(
       <>
-        {kinds.map(k => (
+        {kinds.map((k) => (
           <Alert kind={k} key={k}>
             {k}
           </Alert>
@@ -21,7 +23,7 @@ describe('<Alert />', () => {
       </>,
     );
 
-    kinds.forEach(k => {
+    kinds.forEach((k) => {
       expect(getByText(k)).toMatchSnapshot();
     });
   });

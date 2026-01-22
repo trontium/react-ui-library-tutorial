@@ -30,7 +30,7 @@ group:
 - `message.warning(content, [duration])`
 - `message.loading(content, [duration])`
 
-| 参数 | 说明 | 类型 | 默认值 |
-| --- | --- | --- | --- |
-| content | 提示内容 | `ReactNode` | - |
-| duration | 自动关闭的延时，单位秒。设为 0 时不自动关闭。 | `number` | 3 |
+| 参数     | 说明                                          | 类型        | 默认值 |
+| -------- | --------------------------------------------- | ----------- | ------ |
+| content  | 提示内容                                      | `ReactNode` | -      |
+| duration | 自动关闭的延时，单位秒。设为 0 时不自动关闭。 | `number`    | 3      |

@@ -1,8 +1,9 @@
-import React, { FC, useEffect, useState } from 'react';
+import type { FC } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import classNames from 'classnames';
 
-import { TreeDataNode, TreeProps } from './interface';
+import type { TreeDataNode, TreeProps } from './interface';
 import './style';
 
 const prefixCls = 'trontium-tree';

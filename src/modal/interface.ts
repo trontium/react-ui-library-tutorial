@@ -1,4 +1,4 @@
-import React from 'react';
+import type React from 'react';
 
 export interface ModalProps {
   /**
@@ -50,6 +50,6 @@ export interface ModalProps {
    * @default true
    */
   maskClosable?: boolean;
-  
+
   children?: React.ReactNode;
 }
