@@ -1,11 +1,6 @@
 ---
 title: Form 表单
-group:
-  title: Data Entry
-  path: /components
-nav:
-  title: Components
-  path: /components
+group: 数据录入
 ---
 
 # Form 表单
@@ -16,7 +11,7 @@ nav:
 
 ### 基本使用
 
-<code src="./demo/basic.tsx" />
+<code src="./demo/basic.tsx"></code>
 
 ## API
 
