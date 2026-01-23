@@ -1,5 +1,5 @@
 // src/form/useForm.ts
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 
 import Schema from 'async-validator';
 import type { ValidateError } from 'async-validator';
@@ -12,11 +12,8 @@ export class FormStore {
   private fieldEntities: FieldEntity[] = [];
   private callbacks: Callbacks = {};
   private initialValues: Record<string, any> = {};
-  private forceRootUpdate: () => void;
 
-  constructor(forceUpdate: () => void) {
-    this.forceRootUpdate = forceUpdate;
-  }
+  // constructor() {}
 
   public getFieldsValue = () => {
     return { ...this.store };
@@ -156,16 +153,12 @@ export class FormStore {
 
 export const useForm = (form?: FormInstance) => {
   const formRef = useRef<FormInstance | null>(null);
-  const [, forceUpdate] = React.useState({});
 
   if (!formRef.current) {
     if (form) {
       formRef.current = form;
     } else {
-      const forceReRender = () => {
-        forceUpdate({});
-      };
-      const formStore = new FormStore(forceReRender);
+      const formStore = new FormStore();
       formRef.current = formStore.getForm();
     }
   }
